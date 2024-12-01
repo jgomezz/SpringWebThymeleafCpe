@@ -1,12 +1,14 @@
 package pe.edu.tecsup.tienda.webs;
 
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+@Slf4j
 @Controller
-//@RestController
 public class ProductoController {
 
     @GetMapping("")
@@ -20,6 +22,17 @@ public class ProductoController {
      * plantilla manager.html
      */
 
+    /**
+     *
+     * @param model
+     * @return
+     */
+    @GetMapping("/productos")
+    public String index(Model model) {
 
+        log.info("Call index()");
+
+        return "productos";
+    }
 
 }
