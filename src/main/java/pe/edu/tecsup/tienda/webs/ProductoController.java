@@ -7,9 +7,11 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import pe.edu.tecsup.tienda.dtos.ProductoTO;
+import pe.edu.tecsup.tienda.dtos.UsuarioTO;
 
 import java.util.ArrayList;
 import java.util.List;
+
 
 @Slf4j
 @Controller
@@ -32,7 +34,7 @@ public class ProductoController {
      * @return
      */
     @GetMapping("/productos")
-    public String index(Model model) {
+    public String obtenerProductos(Model model) {
 
         log.info("Call index()");
 
@@ -49,6 +51,22 @@ public class ProductoController {
         model.addAttribute("productos", productos);
 
         return "productos";
+    }
+
+    @GetMapping("/usuarios")
+    public String obtenerUsuarios(Model model) {
+
+        log.info("Call obtenerUsuarios()");
+
+        // Adicionar lista de usuarios al modelo
+        List<UsuarioTO> usuarios = new ArrayList<>();
+        usuarios.add(new UsuarioTO(1L, "Alberto","Perez",24));
+        usuarios.add(new UsuarioTO(2L, "Pedro","Flores",22));
+        usuarios.add(new UsuarioTO(3L, "Elizabetn","Garcia",24));
+        usuarios.add(new UsuarioTO(4L, "Carmen","Pariona",28));
+        model.addAttribute("usuarios", usuarios);
+
+        return "usuarios";
     }
 
 }
