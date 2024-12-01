@@ -5,13 +5,14 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-//@Controller
-@RestController
+@Controller
+//@RestController
 public class ProductoController {
 
     @GetMapping("")
     public String home (){
-        return "Hello world again..!";
+        //return "Hello world again again..!";
+        return "hello";
     }
 
 }
