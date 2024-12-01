@@ -15,4 +15,11 @@ public class ProductoController {
         return "home";
     }
 
+    /**
+     * Crear una peticion GET "/manager" y qye me redireccione a la
+     * plantilla manager.html
+     */
+
+
+
 }
