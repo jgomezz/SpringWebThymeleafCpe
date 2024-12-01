@@ -37,7 +37,7 @@ public class ProductoController {
         log.info("Call index()");
 
         // Adicionar mensaje al modelo
-        String mensaje = "Hello Everyone!!!";
+        String mensaje = "Hola a todos!";
         model.addAttribute("mensaje", mensaje);
 
         // Adicionar lista de productos al modelo
