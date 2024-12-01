@@ -24,7 +24,7 @@ public class ProductoTO {
                 "id=" + id +
                 ", nombre='" + nombre + '\'' +
                 ", descripcion='" + descripcion + '\'' +
-                ", categortia='" + categoria + '\'' +
+                ", nombre categortia ='" + categoria.getNombre() + '\'' +
                 ", precio=" + precio +
                 ", stock=" + stock +
                 ", imagen_nombre='" + imagen_nombre + '\'' +
