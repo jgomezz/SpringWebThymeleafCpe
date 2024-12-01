@@ -4,10 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+
+    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css} "/>
+    <link th:rel="stylesheet" th:href="@{/webjars/font-awesome/css/all.css} "/>
+
 </head>
 <body>
+
+<div class="container-fluid">
+
     <h2>Productos</h2>
 
+    <hr>
 
     <span th:text="${mensaje}"/>
 
@@ -25,6 +33,8 @@
         </tr>
         </tbody>
     </table>
+
+</div>
 
 </body>
 </html>
