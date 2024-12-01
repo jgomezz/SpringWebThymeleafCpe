@@ -12,7 +12,7 @@ public class ProductoController {
     @GetMapping("")
     public String home (){
         //return "Hello world again again..!";
-        return "hello";
+        return "home";
     }
 
 }
