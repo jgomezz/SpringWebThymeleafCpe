@@ -1,16 +1,19 @@
 package pe.edu.tecsup.tienda.dtos;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 @Getter
 @Setter
+@NoArgsConstructor
+@RequiredArgsConstructor
 public class ProductoTO {
 
-    Long id;
-    CategoriaTO categoria;
+    private Long id;
+    private CategoriaTO categoria;
+    @NonNull
     private String nombre;
     private String descripcion;
+    @NonNull
     private Double precio;
     private Integer stock;
     private String imagen_nombre;
